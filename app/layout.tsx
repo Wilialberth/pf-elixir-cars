@@ -22,7 +22,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         {children}
-        <Footer createdBy={"Lobos del JavaScript"} />
+        {/* {<Footer createdby={"Lobos del JavaScript"} />} */}
+        <Footer/>
       </body>
     </html>
   );
