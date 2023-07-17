@@ -1,104 +1,83 @@
 import Link from 'next/link';
-/* import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconDefinition } from '@fortawesome/fontawesome-common-types'; */
-
-/* const socialIcons: { [key: string]: IconDefinition } = {
-  facebook: faFacebook,
-  twitter: faTwitter,
-  instagram: faInstagram,
-}; */
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white">
-        <div>
-          <img src= "/logo_elixir.png" width={200} height={200} alt="Nuestro logo" />
+    <footer>
+      <div className='widgets_wrapper bg-sky-500 text-white'>
+        <div className='container mx-auto py-8 grid grid-cols-1 md:grid-cols-4 gap-4'>
+          <div className='column one-fourth'>
+            <aside className='widget_text widget widget_custom_html'>
+              <div className="flex justify-center items-center py-10" >
+                <img src="/logo_elixir.png" width={350} height={350} alt="Nuestro logo" />
+              </div>
+            </aside>
+          </div>
+          <div className='column one-fourth'>
+            <aside className='widget widget_block'>
+              <h5>Enlaces de interés</h5><br />
+              <ul>
+                <li><a href="/nosotros" target="_blank">Empresa</a></li>
+                <li><a href="/preguntas-frecuentes" target="_blank">Preguntas frecuentes</a></li>
+                <li><a href="mailto:busquedas@elixircars.com" target="_blank">¿Quieres trabajar con nostros?</a></li>
+                <li><a href="/arrepentimiento" target="_blank">Formulario</a></li>
+              </ul>
+            </aside>
+          </div>
+          <div className='column one-fourth'>
+            <aside className='widget_text widget widget_custom_html'>
+              <div className='textwidget custom-html-widget'>
+                <h5>Enlaces de interés</h5><br />
+                <ul>
+                  <li><a href="/terminos-y-condiciones-de-uso/" target="_blank">Términos y Condiciones</a></li>
+                  <li><a href="/politica-privacidad/" target="_blank">Política de privacidad</a></li>
+                  <li><a href="/terminos-y-condiciones-de-uso/" target="_blank">Cookies</a></li>
+                  <li><a href="https://outlook.office.com/mail/" target="_blank">Acceso empleados</a></li>
+                  <li><a href="/atencion-publicaciones-fraudulentas/" target="_blank">Atención a publicaciones fraudulentas</a></li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+          <div className='widget_text widget widget_custom_html flex justify-center'>
+            <aside className='widget_text widget widget_custom_html'>
+              <div className='textwidget custom-html-widget'>
+                <a href="http://qr.afip.gob.ar/?qr=TXIfi4ZgHPHLJcmO2azGzA,," target="_F9GOAFIPINfo" rel="noopener">
+                  <img src="https://www.carone.com.ar/wp-content/uploads/2023/05/DATAWEB.jpeg" width={100} height={100} alt="Nuestro logo" />
+                </a>
+              </div>
+            </aside>
+          </div>
         </div>
-      <div className="container mx-auto py-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div>
-            <h2 className="text-lg font-semibold">Enlaces</h2>
-            <ul className="mt-4">
-              <li><Link href="/">Inicio</Link></li>
-              <li><Link href="/nosotros">Nosotros</Link></li>
-              <li><Link href="/blog">Blog</Link></li>
-              <li><Link href="/tienda">Tienda</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h2 className="text-lg font-semibold">Contacto</h2>
-            <p className="mt-4">Correo electrónico: elixircars@example.com</p>
-            <p>Teléfono: +1234567890</p>
-          </div>
-          <div>
-            <h2 className="text-lg font-semibold">Redes Sociales</h2>
+      </div>
+      <div className='Redes_sociales'>
+        <div className='widget_text widget widget_custom_html flex justify-center bg-sky-500 text-white border-t border-white border-opacity-25 border-2'>
+          <div className='column one'>
+            {/* <h2 className="text-lg font-semibold">Redes Sociales</h2> */}
             <ul className="mt-4 flex space-x-4">
-            <div className="flex space-x-7">
-                    <a href="https://es-la.facebook.com/" target="_blank">
-                          <img src="/face.gif" className="w-6 h-6" alt="facebook_icon" />
-                    </a>
-                    <a href="https://www.instagram.com/" target="_blank">
-                          <img src="/insta.gif" className="w-6 h-6" alt="insta_icon" />
-                    </a>
-                    <a href="https://gmail.com" target="_blank">
-                          <img src="/mail.gif" className="w-6 h-6" alt="mail_icon" />
-                    </a>
-
-            </div>
-            </ul>
-          </div>
-          <div>
-            <h2 className="text-lg font-semibold">Derechos Reservados</h2>
-            <p className="mt-4">© 2023 Tu Empresa. Todos los derechos reservados.</p>
+              <li>
+                <a href="https://es-la.facebook.com/" target="_blank">
+                  <img src="/face.gif" className="w-8 h-8 rounded-lg" alt="facebook_icon" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/" target="_blank">
+                  <img src="/insta.gif" className="w-8 h-8 rounded-lg" alt="insta_icon" />
+                </a>
+              </li>
+              <li>
+                <a href="https://gmail.com" target="_blank">
+                  <img src="/mail.gif" className="w-8 h-8 rounded-lg" alt="mail_icon" />
+                </a>
+              </li>
+            </ul><br />
+          
           </div>
         </div>
+        <div className="text-center bg-sky-700 text-white">
+              © 2023 ELIXIR CARS S.A. Todos los derechos reservados.
+            </div>
       </div>
     </footer>
   );
 };
 
 export default Footer;
-
-
-/* 
-import Link from 'next/link';
-
-const Footer = () => {
-  return (
-    <footer className="p-4 text-center bg-blue-900 text-white" > 
-      <div className="container mx-auto lg:flex lg:justify-between" >
-        <nav className="flex flex-col items-center text-2xl text-white no-underline font-bold md:flex-row md:gap-8">
-        <img src= "/logo_elixir.png" width={200} height={200} alt="Nuestro logo" />
-          <Link className='hover:text-yellow-500' href="/">Inicio</Link>
-          <Link className='hover:text-yellow-500' href="/nosotros">Nosotros</Link>
-          <Link className='hover:text-yellow-500' href="/blog">Blog</Link>
-          <Link className='hover:text-yellow-500' href="/tienda">Tienda</Link>
-        </nav>
-        <p className="text-2xl text-white font-bold text-center">Derechos reservados</p>
-      </div>
-    </footer>
-  );
-}; 
-
-
- export default Footer */
-
-/* interface footerProps {
-    createdBy: string;
-  }
-  
-  const Footer: React.FC<footerProps> = ({ createdBy }) => {
-    return (
-      <footer>
-        <div
-          className="p-4 text-center"
-          style={{ backgroundColor: "#071952", color: "#fff" }}
-        >
-          <h3>{createdBy}</h3>
-        </div>
-      </footer>
-    );
-  };
-  
-  export default Footer; */
